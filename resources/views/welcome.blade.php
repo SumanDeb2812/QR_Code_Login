@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Site</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-</head>
-<body>
-    <div class="w-100 d-flex flex-column align-items-center justify-content-center" style="height: 100vh">
-        <h2>Login System With QR Code</h2>
-        <a href="{{ url('login') }}"><button>Get Started</button></a>
-    </div>
+@extends('layout')
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-</body>
-</html>
+@section('main-content')
+    <div class="flex items-center flex-col justify-center">
+        <h2 class="text-3xl font-bold mb-5">Login System With QR Code</h2>
+        <div class="flex">
+            <a href="{{ url('login') }}"><button class="bg-red-500 px-5 py-1 rounded-md text-white mr-5">Get Started</button></a>
+            <a href="{{ url('registration') }}"><button class="bg-blue-500 px-5 py-1 rounded-md text-white">Register</button></a>
+        </div> 
+    </div>
+@endsection
