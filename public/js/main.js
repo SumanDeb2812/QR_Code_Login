@@ -16,6 +16,7 @@ function onScanSuccess(decodedText, decodedResult) {
             }
         }
     });
+    html5QrcodeScanner.clear();
 }
 
 function onScanFailure(error) {

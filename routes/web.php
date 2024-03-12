@@ -20,13 +20,12 @@ Route::get('/', function () { return view('welcome'); });
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'login']);
 
+Route::get('/registration', [RegistrationController::class, 'index']);
+Route::post('/registration', [RegistrationController::class, 'registration'])->name('registration');
+
 Route::middleware('login')->group(function(){
 
     Route::get('/logout', [LoginController::class, 'logout']);
-
-    Route::get('/registration', [RegistrationController::class, 'index']);
-
-    Route::post('/registration', [RegistrationController::class, 'registration'])->name('registration');
 
     Route::get('/dashboard', function () { return view('dashboard'); });
 
