@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('main-content')
-    <button class="absolute top-5 left-5">Back</button>
-    <div class="shadow-[0_5px_10px_rgb(0,0,0)] w-1/3 p-10 rounded-md bg-blue-400 text-white">
+    <a href="{{ url('/') }}" class="absolute top-5 left-5 bg-red-500 px-4 text-white rounded-md font-semibold hover:shadow-[0_2px_5px_rgba(0,0,0,0.8)] ease duration-100 cursor-pointer">Back</a>
+    <div class="shadow-[0_5px_10px_rgb(0,0,0)] w-1/3 p-10 rounded-md bg-blue-400">
         <h2 class="font-bold text-2xl mb-5 font-mono">Register Yourself...</h2>
         <form action="{{ route('registration') }}" method="post" class="">
             @csrf
@@ -24,7 +24,7 @@
             </div>
             <div class="mb-10 flex items-start justify-between flex-col w-full">
                 <label for="" class="mb-1 font-semibold">Confirm Password</label>
-                <input type="text" name="password" class="w-full p-1 rounded-md outline-none font-semibold">
+                <input type="text" name="c_password" class="w-full p-1 rounded-md outline-none font-semibold">
             </div>
             <input type="submit" value="Submit" class="w-full p-1 rounded-md outline-none bg-blue-700 hover:shadow-[0_2px_5px_rgba(0,0,0,0.8)] ease duration-100 cursor-pointer font-semibold font-mono">
         </form>

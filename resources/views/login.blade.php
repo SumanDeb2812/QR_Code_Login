@@ -4,6 +4,7 @@
 @extends('layout')
 
 @section('main-content')
+<a href="{{ url('/') }}" class="absolute top-5 left-5 bg-red-500 px-4 text-white rounded-md font-semibold hover:shadow-[0_2px_5px_rgba(0,0,0,0.8)] ease duration-100 cursor-pointer">Back</a>
 <div class="flex w-(600px) py-10 rounded-md justify-between shadow-[0_0px_10px_rgba(0,0,0)] bg-blue-400 text-white">
     <div class="p-10">
         <div class="flex flex-col items-center justify-center w-80 h-full" id="reader"></div>
@@ -12,7 +13,7 @@
         <h5 class="text-xl font-mono font-bold mb-10">Login With Credentials</h5>
         <div class="w-full">
             <div class="w-full flex items-center justify-between mb-5">
-                <label for="" class="font-semibold">Employee ID</label>
+                <label for="" class="font-semibold">Reg ID</label>
                 <input type="emp_id" class="p-1 rounded-md outline-none font-semibold">
             </div>
             <div class="w-full flex items-center justify-between mb-10">
